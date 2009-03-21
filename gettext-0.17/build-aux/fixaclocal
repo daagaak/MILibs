@@ -21,7 +21,7 @@
 result=$?
 if test $result = 0 && test -f aclocal.m4; then
   # Remove the block of 4 lines starting with 'm4_if(m4_PACKAGE_VERSION'.
-  sed -e '/m4_if(m4_PACKAGE_VERSION/{N;N;N;d}' < aclocal.m4 > aclocal.m4.tmp
+  sed -e '/m4_if(m4_PACKAGE_VERSION/{N;N;N;d;}' < aclocal.m4 > aclocal.m4.tmp
   if cmp aclocal.m4 aclocal.m4.tmp > /dev/null; then
     rm -f aclocal.m4.tmp
   else
