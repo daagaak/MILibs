@@ -11,49 +11,49 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81580A40F73BD8B00862AEC /* Configure pkg-config */;
+			remoteGlobalIDString = A81580A40F73BD8B00862AEC;
 			remoteInfo = "Configure pkg-config";
 		};
 		A81580DF0F73C19500862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81580CD0F73C01C00862AEC /* Configure gettext */;
+			remoteGlobalIDString = A81580CD0F73C01C00862AEC;
 			remoteInfo = "Configure gettext";
 		};
 		A81581060F73E3F100862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81580D70F73C14900862AEC /* Build gettext */;
+			remoteGlobalIDString = A81580D70F73C14900862AEC;
 			remoteInfo = "Build gettext";
 		};
 		A81581300F73E96E00862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81580E20F73D41000862AEC /* Configure glib */;
+			remoteGlobalIDString = A81580E20F73D41000862AEC;
 			remoteInfo = "Configure glib";
 		};
 		A81581430F73F14800862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81580990F73BC5500862AEC /* Build pkg-config */;
+			remoteGlobalIDString = A81580990F73BC5500862AEC;
 			remoteInfo = "Build pkg-config";
 		};
 		A81581450F73F14800862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A81581030F73E3D700862AEC /* "Install" gettext */;
+			remoteGlobalIDString = A81581030F73E3D700862AEC;
 			remoteInfo = "\"Install\" gettext";
 		};
 		A815814B0F73F19100862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A815812D0F73E96100862AEC /* Build glib */;
+			remoteGlobalIDString = A815812D0F73E96100862AEC;
 			remoteInfo = "Build glib";
 		};
 /* End PBXContainerItemProxy section */
@@ -13078,18 +13078,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1DEB919408733D9F0010E9CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.4;
-			};
-			name = Debug;
-		};
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -13100,16 +13088,6 @@
 				SDKROOT = macosx10.4;
 			};
 			name = Release;
-		};
-		A815809A0F73BC5600862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build pkg-config";
-			};
-			name = Debug;
 		};
 		A815809B0F73BC5600862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -13122,16 +13100,6 @@
 			};
 			name = Release;
 		};
-		A81580A50F73BD8C00862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Configure pkg-config";
-			};
-			name = Debug;
-		};
 		A81580A60F73BD8C00862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -13142,16 +13110,6 @@
 				ZERO_LINK = NO;
 			};
 			name = Release;
-		};
-		A81580CE0F73C01D00862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Configure gettext";
-			};
-			name = Debug;
 		};
 		A81580CF0F73C01D00862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -13164,16 +13122,6 @@
 			};
 			name = Release;
 		};
-		A81580D80F73C14900862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build gettext";
-			};
-			name = Debug;
-		};
 		A81580D90F73C14900862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -13184,16 +13132,6 @@
 				ZERO_LINK = NO;
 			};
 			name = Release;
-		};
-		A81580E30F73D41000862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Configure glib";
-			};
-			name = Debug;
 		};
 		A81580E40F73D41000862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -13206,16 +13144,6 @@
 			};
 			name = Release;
 		};
-		A81581040F73E3D700862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "\"Install\" gettext";
-			};
-			name = Debug;
-		};
 		A81581050F73E3D700862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -13227,16 +13155,6 @@
 			};
 			name = Release;
 		};
-		A815812E0F73E96200862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Compile glib";
-			};
-			name = Debug;
-		};
 		A815812F0F73E96200862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -13247,16 +13165,6 @@
 				ZERO_LINK = NO;
 			};
 			name = Release;
-		};
-		A81581490F73F18000862AEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "\"Install\" glib";
-			};
-			name = Debug;
 		};
 		A815814A0F73F18000862AEC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -13275,7 +13183,6 @@
 		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "MILibs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DEB919408733D9F0010E9CD /* Debug */,
 				1DEB919508733D9F0010E9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13284,7 +13191,6 @@
 		A81580A10F73BC8B00862AEC /* Build configuration list for PBXLegacyTarget "Build pkg-config" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A815809A0F73BC5600862AEC /* Debug */,
 				A815809B0F73BC5600862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13293,7 +13199,6 @@
 		A81580AB0F73BD9F00862AEC /* Build configuration list for PBXLegacyTarget "Configure pkg-config" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81580A50F73BD8C00862AEC /* Debug */,
 				A81580A60F73BD8C00862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13302,7 +13207,6 @@
 		A81580D20F73C02700862AEC /* Build configuration list for PBXLegacyTarget "Configure gettext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81580CE0F73C01D00862AEC /* Debug */,
 				A81580CF0F73C01D00862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13311,7 +13215,6 @@
 		A81580DE0F73C16A00862AEC /* Build configuration list for PBXLegacyTarget "Build gettext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81580D80F73C14900862AEC /* Debug */,
 				A81580D90F73C14900862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13320,7 +13223,6 @@
 		A81580EA0F73D43200862AEC /* Build configuration list for PBXLegacyTarget "Configure glib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81580E30F73D41000862AEC /* Debug */,
 				A81580E40F73D41000862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13329,7 +13231,6 @@
 		A81581090F73E41100862AEC /* Build configuration list for PBXLegacyTarget ""Install" gettext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81581040F73E3D700862AEC /* Debug */,
 				A81581050F73E3D700862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13338,7 +13239,6 @@
 		A81581390F73E97C00862AEC /* Build configuration list for PBXLegacyTarget "Build glib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A815812E0F73E96200862AEC /* Debug */,
 				A815812F0F73E96200862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -13347,7 +13247,6 @@
 		A81581520F73F1AA00862AEC /* Build configuration list for PBXLegacyTarget ""Install" glib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A81581490F73F18000862AEC /* Debug */,
 				A815814A0F73F18000862AEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
