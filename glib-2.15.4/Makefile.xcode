@@ -9,9 +9,9 @@ INCLUDE		:= $(BUILT_PRODUCTS_DIR)/include
 LIBS 		:= $(BUILT_PRODUCTS_DIR)/lib
 ARCH		:= $(shell uname -p)
 
-ifeq ($(findstring 10.6, $(OS_VER)), 10.6)
-	CC := gcc-4.0
-	CFLAGS	:= -O0 -g -arch i386 -arch ppc -isysroot $(SDK_DIR) -I$(INCLUDE)
+ifeq ($(findstring 10.4, $(OS_VER)), 10.4)
+	CC := gcc
+	CFLAGS	:= -O0 -g -D_POSIX_C_SOURCE=200112L -arch i386 -arch ppc -isysroot $(SDK_DIR) -I$(INCLUDE)
 	LDFLAGS := -Wl,-syslibroot,$(SDK_DIR) -arch i386 -arch ppc -L$(LIBS)
 else
 ifeq ($(findstring 10.5, $(OS_VER)), 10.5)
@@ -19,8 +19,8 @@ ifeq ($(findstring 10.5, $(OS_VER)), 10.5)
 	CFLAGS	:= -O0 -g -arch i386 -arch ppc -isysroot $(SDK_DIR) -I$(INCLUDE)
 	LDFLAGS := -Wl,-syslibroot,$(SDK_DIR) -arch i386 -arch ppc -L$(LIBS)
 else
-	CC := gcc
-	CFLAGS	:= -O0 -g -D_POSIX_C_SOURCE=200112L -arch i386 -arch ppc -isysroot $(SDK_DIR) -I$(INCLUDE)
+	CC := gcc-4.0
+	CFLAGS	:= -O0 -g -arch i386 -arch ppc -isysroot $(SDK_DIR) -I$(INCLUDE)
 	LDFLAGS := -Wl,-syslibroot,$(SDK_DIR) -arch i386 -arch ppc -L$(LIBS)
 endif
 endif
