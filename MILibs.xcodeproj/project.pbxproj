@@ -5909,7 +5909,7 @@
 		C9B0F83411C59236009B09D5 /* Makefile.decl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.decl; sourceTree = "<group>"; };
 		C9B0F83511C59236009B09D5 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
 		C9B0F83611C59236009B09D5 /* makefile.msc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile.msc; sourceTree = "<group>"; };
-		C9B0F83711C59236009B09D5 /* Makefile.xcode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.xcode; sourceTree = "<group>"; };
+		C9B0F83711C59236009B09D5 /* Makefile.xcode */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; fileEncoding = 4; path = Makefile.xcode; sourceTree = "<group>"; };
 		C9B0F83811C59236009B09D5 /* missing */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
 		C9B0F83911C59236009B09D5 /* mkinstalldirs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mkinstalldirs; sourceTree = "<group>"; };
 		C9B0F83A11C59236009B09D5 /* msvc_recommended_pragmas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msvc_recommended_pragmas.h; sourceTree = "<group>"; };
@@ -14605,7 +14605,7 @@
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = i386;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

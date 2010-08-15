@@ -1,4 +1,5 @@
 MAKEFILE=$(abspath $(BUILD_ROOT)/pkg-config-build/Makefile)
+ARCH_FLAGS=$(patsubst %, -arch %,$(ARCHS))
 
 all:	$(MAKEFILE)
 
@@ -9,9 +10,9 @@ $(MAKEFILE):	Makefile.xcode configure Makefile.in config.h.in
 	ditto ./ "$(BUILD_ROOT)/pkg-config-build"
 	# now go in and build there
 	(cd "$(BUILD_ROOT)/pkg-config-build" && \
-		CC=gcc-4.0 \
-		CFLAGS="-O -g -arch i386 -arch ppc -isysroot $(SDKROOT)" \
-		LDFLAGS="-arch i386 -arch ppc" \
+		CC=gcc-4.2 \
+		CFLAGS="-O -g $(ARCH_FLAGS) -isysroot $(SDKROOT)" \
+		LDFLAGS="$(ARCH_FLAGS)" \
 		./configure --prefix=/usr/local --disable-dependency-tracking)
 
 clean:

@@ -1,4 +1,5 @@
 MAKEFILE=$(abspath $(BUILD_ROOT)/gettext-build/Makefile)
+ARCH_FLAGS=$(patsubst %, -arch %,$(ARCHS))
 
 all:	$(MAKEFILE)
 
@@ -7,10 +8,12 @@ $(MAKEFILE):	Makefile.xcode configure Makefile.in
 	mkdir -p "$(BUILD_ROOT)"/gettext-build
 	ditto ./ "$(BUILD_ROOT)"/gettext-build
 	(cd "$(BUILD_ROOT)"/gettext-build && \
-		CC=gcc-4.0 \
+		CC=gcc-4.2 \
+		CXX=g++-4.2 \
 		PATH="$(BUILD_ROOT)/sed-build/sed:$(PATH)" \
-		CFLAGS="-O0 -g -D_POSIX_C_SOURCE=200112L -arch i386 -arch ppc -isysroot $(SDKROOT)" \
-		LDFLAGS="-Wl,-syslibroot,$(SDKROOT) -arch i386 -arch ppc -fno-common" \
+		CFLAGS="-O0 -g -D_POSIX_C_SOURCE=200112L $(ARCH_FLAGS) -isysroot $(SDKROOT)" \
+		CXXFLAGS="$(ARCH_FLAGS) -isysroot $(SDKROOT)" \
+		LDFLAGS="-Wl,-syslibroot,$(SDKROOT) $(ARCH_FLAGS) -fno-common" \
 		./configure --prefix=$(BUILT_PRODUCTS_DIR) --disable-dependency-tracking --with-libiconv-prefix=$(SDK_DIR)/usr)
 
 clean:

@@ -1,4 +1,5 @@
 OS_VER	:= $(shell sw_vers -productVersion)
+ARCH_FLAGS=$(patsubst %, -arch %,$(ARCHS))
 
 PKG_CONFIG 	:= $(abspath $(BUILD_ROOT)/pkg-config-build)
 MSGFMT		:= $(BUILT_PRODUCTS_DIR)/bin
@@ -12,17 +13,17 @@ MAKEFILE	:= $(abspath $(BUILD_ROOT)/glib-build/Makefile)
 
 ifeq ($(findstring 10.4, $(OS_VER)), 10.4)
 	CC := gcc
-	CFLAGS	:= -O0 -g -D_POSIX_C_SOURCE=200112L -arch i386 -arch ppc -isysroot $(SDKROOT) -I$(INCLUDE)
-	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) -arch i386 -arch ppc -L$(LIBS)
+	CFLAGS	:= -O0 -g -D_POSIX_C_SOURCE=200112L $(ARCH_FLAGS) -isysroot $(SDKROOT) -I$(INCLUDE)
+	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) $(ARCH_FLAGS) -L$(LIBS)
 else
 ifeq ($(findstring 10.5, $(OS_VER)), 10.5)
 	CC := gcc
-	CFLAGS	:= -O0 -g -arch i386 -arch ppc -isysroot $(SDKROOT) -I$(INCLUDE)
-	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) -arch i386 -arch ppc -L$(LIBS)
+	CFLAGS	:= -O0 -g $(ARCH_FLAGS) -isysroot $(SDKROOT) -I$(INCLUDE)
+	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) $(ARCH_FLAGS) -L$(LIBS)
 else
-	CC := gcc-4.0
-	CFLAGS	:= -O0 -g -arch i386 -arch ppc -isysroot $(SDKROOT) -I$(INCLUDE)
-	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) -arch i386 -arch ppc -L$(LIBS)
+	CC := gcc-4.2
+	CFLAGS	:= -O0 -g $(ARCH_FLAGS) -isysroot $(SDKROOT) -I$(INCLUDE)
+	LDFLAGS := -Wl,-syslibroot,$(SDKROOT) $(ARCH_FLAGS) -L$(LIBS)
 endif
 endif
 
