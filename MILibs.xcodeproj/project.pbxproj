@@ -14485,7 +14485,7 @@
 		};
 		A81581480F73F18000862AEC /* "Install" glib */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "install-exec";
+			buildArgumentsString = install;
 			buildConfigurationList = A81581520F73F1AA00862AEC /* Build configuration list for PBXLegacyTarget ""Install" glib" */;
 			buildPhases = (
 			);
@@ -14621,6 +14621,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.5;
+				VALID_ARCHS = "x86_64 i386 ppc";
 			};
 			name = Release;
 		};
