@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		C960CD5512ED67BF00DBB3E9 /* Copy important dSYMs */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C960CD5C12ED67E800DBB3E9 /* Build configuration list for PBXAggregateTarget "Copy important dSYMs" */;
+			buildPhases = (
+				C960CD5412ED67BF00DBB3E9 /* ShellScript */,
+			);
+			dependencies = (
+				C960CD7812ED740400DBB3E9 /* PBXTargetDependency */,
+			);
+			name = "Copy important dSYMs";
+			productName = "Copy important dSYMs";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXContainerItemProxy section */
 		A81580C60F73BFBA00862AEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -55,6 +70,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A81581030F73E3D700862AEC;
 			remoteInfo = "\"Install\" gettext";
+		};
+		C960CD7712ED740400DBB3E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A81581480F73F18000862AEC /* "Install" glib */;
+			remoteInfo = "\"Install\" glib";
 		};
 		C9F6559A10B3E04700511566 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -14556,9 +14578,26 @@
 				A81580E20F73D41000862AEC /* Configure glib */,
 				A815812D0F73E96100862AEC /* Build glib */,
 				A81581480F73F18000862AEC /* "Install" glib */,
+				C960CD5512ED67BF00DBB3E9 /* Copy important dSYMs */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C960CD5412ED67BF00DBB3E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# glib and gettext both build dSYMs but don't install them, copy ones we care about now.\n\n# glib\ncp -rf \"$BUILD_ROOT/glib-build/glib/.libs/libglib-2.0.0.dylib.dSYM\" \"$BUILT_PRODUCTS_DIR/lib/libglib-2.0.0.dylib.dSYM\"\ncp -rf \"$BUILD_ROOT/glib-build/gmodule/.libs/libgmodule-2.0.0.dylib.dSYM\" \"$BUILT_PRODUCTS_DIR/lib/libgmodule-2.0.0.dylib.dSYM\"\n\n# gettext\n# after a long time messing with libtool. I couldn't get it to invoke the compiler driver with the -g option to generate a binary\n# with actual debugging information in it.\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		A81580C70F73BFBA00862AEC /* PBXTargetDependency */ = {
@@ -14595,6 +14634,11 @@
 			isa = PBXTargetDependency;
 			target = A81581030F73E3D700862AEC /* "Install" gettext */;
 			targetProxy = C911EC1C12E83333000541EB /* PBXContainerItemProxy */;
+		};
+		C960CD7812ED740400DBB3E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A81581480F73F18000862AEC /* "Install" glib */;
+			targetProxy = C960CD7712ED740400DBB3E9 /* PBXContainerItemProxy */;
 		};
 		C9F6559B10B3E04700511566 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -14715,6 +14759,17 @@
 			};
 			name = Release;
 		};
+		C960CD5612ED67BF00DBB3E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Copy important dSYMs";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C9F6557B10B3DE8900511566 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -14808,6 +14863,14 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A815814A0F73F18000862AEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C960CD5C12ED67E800DBB3E9 /* Build configuration list for PBXAggregateTarget "Copy important dSYMs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C960CD5612ED67BF00DBB3E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
