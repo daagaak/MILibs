@@ -48,7 +48,7 @@ real-configure:
 		--with-libiconv=native \
 		--enable-debug=yes
 	# compiling fat 64-bit/32-bit creates a gint64 of the wrong size for i386
-	patch -p0 < config.status.patch
+	patch -p0 < config.status.patch || exit 1
 	chmod +x config.status
 	# make sure we remove glibconfig.h so it gets rebuild at make time
 	rm glibconfig.h
