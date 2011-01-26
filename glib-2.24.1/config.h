@@ -37,7 +37,11 @@
 #define GLIB_BINARY_AGE 2401
 
 /* Byte contents of gmutex */
-#define GLIB_BYTE_CONTENTS_GMUTEX -89,-85,-86,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ifdef __LP64__
+  #define GLIB_BYTE_CONTENTS_GMUTEX -89,-85,-86,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#else
+  #define GLIB_BYTE_CONTENTS_GMUTEX -89,-85,-86,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#endif
 
 /* Define to the GLIB interface age */
 #define GLIB_INTERFACE_AGE 1
@@ -55,10 +59,18 @@
 #define GLIB_MINOR_VERSION 24
 
 /* The size of gmutex, as computed by sizeof. */
-#define GLIB_SIZEOF_GMUTEX 64
+#ifdef __LP64__
+  #define GLIB_SIZEOF_GMUTEX 64
+#else
+  #define GLIB_SIZEOF_GMUTEX 44
+#endif
 
 /* The size of system_thread, as computed by sizeof. */
-#define GLIB_SIZEOF_SYSTEM_THREAD 8
+#ifdef __LP64__
+  #define GLIB_SIZEOF_SYSTEM_THREAD 8
+#else
+  #define GLIB_SIZEOF_SYSTEM_THREAD 4
+#endif
 
 /* alpha atomic implementation */
 /* #undef G_ATOMIC_ALPHA */
@@ -653,7 +665,11 @@
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 8
+#ifdef __LP64__
+  #define SIZEOF_LONG 8
+#else
+  #define SIZEOF_LONG 4
+#endif
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -662,10 +678,18 @@
 #define SIZEOF_SHORT 2
 
 /* The size of `size_t', as computed by sizeof. */
-#define SIZEOF_SIZE_T 8
+#ifdef __LP64__
+  #define SIZEOF_SIZE_T 8
+#else
+  #define SIZEOF_SIZE_T 4
+#endif
 
 /* The size of `void *', as computed by sizeof. */
-#define SIZEOF_VOID_P 8
+#ifdef __LP64__
+  #define SIZEOF_VOID_P 8
+#else
+  #define SIZEOF_VOID_P 4
+#endif
 
 /* The size of `__int64', as computed by sizeof. */
 #define SIZEOF___INT64 0
