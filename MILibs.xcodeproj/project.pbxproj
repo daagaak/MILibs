@@ -13588,8 +13588,9 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386 ppc";
 			};
@@ -13608,8 +13609,9 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 				STRIP_STYLE = "non-global";
 				VALID_ARCHS = "x86_64 i386 ppc";
 			};
@@ -13669,10 +13671,6 @@
 				);
 				INFOPLIST_FILE = "GLib-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/build/Release\"",
-				);
 				OTHER_CFLAGS = (
 					"-DHAVE_CONFIG_H",
 					"-DG_ENABLE_DEBUG",
@@ -13745,10 +13743,6 @@
 				);
 				INFOPLIST_FILE = "GLib-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/build/Release\"",
-				);
 				OTHER_CFLAGS = (
 					"-DHAVE_CONFIG_H",
 					"-DG_ENABLE_DEBUG",
