@@ -13428,7 +13428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd $BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/Headers\n[ -L glib ] && rm glib\nln -sf ./ glib\n";
+			shellScript = "cd $BUILT_PRODUCTS_DIR/$FULL_PRODUCT_NAME/Headers\n[ -d glib ] && mv glib/* . && rm -r glib\nmkdir glib\nmv *.h glib\nmv glib/glib.h glib/glibconfig.h glib/gmodule.h .\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
