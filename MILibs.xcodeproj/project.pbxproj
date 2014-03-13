@@ -13616,7 +13616,6 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/gettext-0.17/gettext-runtime";
-				INSTALL_PATH = /usr/local/lib;
 				LD_DYLIB_INSTALL_NAME = "@loader_path/Resources/$(EXECUTABLE_PATH)";
 				OTHER_CFLAGS = (
 					"-DLOCALEDIR=\\\"/Users/Shared/Projects/MacIrssi/Frameworks/MILibs/build/Release/share/locale\\\"",
@@ -13637,6 +13636,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = libintl;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
 			name = Development;
@@ -13673,6 +13673,7 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = GLib;
+				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "-Wno-return-type";
 				ZERO_LINK = NO;
@@ -13691,7 +13692,6 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/gettext-0.17/gettext-runtime";
-				INSTALL_PATH = /usr/local/lib;
 				LD_DYLIB_INSTALL_NAME = "@loader_path/Resources/$(EXECUTABLE_PATH)";
 				OTHER_CFLAGS = (
 					"-DLOCALEDIR=\\\"/Users/Shared/Projects/MacIrssi/Frameworks/MILibs/build/Release/share/locale\\\"",
@@ -13712,6 +13712,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = libintl;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
 			name = Deployment;
@@ -13748,6 +13749,7 @@
 				OTHER_LDFLAGS = "";
 				PREBINDING = NO;
 				PRODUCT_NAME = GLib;
+				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = "-Wno-return-type";
 				ZERO_LINK = NO;
